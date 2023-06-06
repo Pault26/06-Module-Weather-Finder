@@ -1,8 +1,10 @@
+// Sets up script variables
 var city = document.querySelector("#citySearch");
 var searchBtnEl = document.querySelector("#searchBtn");
 var cityList = document.querySelector("#cityList");
 var today = dayjs().format('MM/DD/YYYY');
 
+// Adds dates to application
 $("#cityName").text("City Name (" + today + ")");
 $("#futureDate1").text(dayjs().add(1, 'day').format('MM/DD/YYYY'));
 $("#futureDate2").text(dayjs().add(2, 'day').format('MM/DD/YYYY'));
@@ -16,13 +18,13 @@ function citySearch() {
     var cityValue = city.value;
     localStorage.setItem(cityValue, cityValue);
     city.value = "";
-
+    // Sets up button
     var newCityBtn = document.createElement("button");
     newCityBtn.setAttribute("class", "list-group-item list-group-item-action");
     newCityBtn.setAttribute("type", "button");
     newCityBtn.textContent = cityValue;
     cityList.appendChild(newCityBtn);
-
+    // Gathers data on searched city
     function cityData() {
       var cityUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityValue + "&units=imperial&appid=2bb4402fe29a55c09200fb5cca6bce10";
       fetch(cityUrl)
@@ -31,7 +33,7 @@ function citySearch() {
         })
         .then(function (data) {
           console.log(data);
-
+        // Sets city name, temp, wind spd, humidity, and weather icon as well as for the next 5 days
           $("#cityName").text(data.city.name + " (" + today + ") ");
           $("#iconToday").attr("src", "https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + "@2x.png");
           $("#tempToday").text("Temp: " + data.list[0].main.temp + " \u00B0F");
@@ -62,13 +64,14 @@ function citySearch() {
           $("#futureHumid4").text(data.list[29].main.humidity + " %");
           $("#futureHumid5").text(data.list[37].main.humidity + " %");
         })
+        // Catches errors
         .catch(error => {
             console.error('Error:', error);
           });
     }
     cityData();
   });
-
+  // Pulls past searches and presents them in the 5 day forecast
   for (var i = 0; i < localStorage.length; i++) {
     var key = localStorage.key(i);
     if (key !== "") {
@@ -88,7 +91,7 @@ function citySearch() {
           })
           .then(function (data) {
             console.log(data);
-            
+            // Sets city name, temp, wind spd, humidity, and weather icon as well as for the next 5 days
             $("#cityName").text(data.city.name + " (" + today + ") ");
             $("#iconToday").attr("src", "https://openweathermap.org/img/wn/" + data.list[0].weather[0].icon + "@2x.png");
             $("#tempToday").text("Temp: " + data.list[0].main.temp + " \u00B0F");
@@ -119,6 +122,7 @@ function citySearch() {
             $("#futureHumid4").text(data.list[29].main.humidity + " %");
             $("#futureHumid5").text(data.list[37].main.humidity + " %");
           })
+          // Catches errors
           .catch(error => {
             console.error('Error:', error);
           });
