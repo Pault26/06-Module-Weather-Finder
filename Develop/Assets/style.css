@@ -1,41 +1,41 @@
 /* General Page */
 body {
-    background-color:dimgrey;
+    background-color: dimgrey;
     padding: 1rem;
     color: white;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-header {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  header {
     background-color: rgb(100, 149, 237);
     text-align: center;
     padding: 1rem;
-}
-
-li {
+  }
+  
+  li {
     list-style: none;
-}
-
-/* Class Style */
-.main-event {
+  }
+  
+  /* Class Style */
+  .main-body {
     background-color: rgb(100, 149, 237);
-}
-
-.card-deck {
+  }
+  
+  .card-deck {
     display: flex;
     justify-content: space-between;
-}
-
-.card {
+  }
+  
+  .card {
     width: 150px;
     background-color: rgb(100, 149, 237);
-}
-
-.list-group button{
+  }
+  
+  .city-list button {
     text-align: center;
-    background-color:rgb(100, 149, 237);
+    background-color: rgb(100, 149, 237);
     margin: 5px;
     color: white;
     font-size: 20px;
     font-weight: bold;
-}
+  }

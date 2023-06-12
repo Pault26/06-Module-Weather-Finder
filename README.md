@@ -116,6 +116,7 @@ _For more examples, please refer to the [Documentation](https://github.com/Pault
 - [X] Add Styles
     - [X] CSS
     - [X] Bootstrap
+- [ ] Fix issue pertaining to local storage pulling up everything
 - [ ] Add greater functionality to website
 
 See the [open issues](https://github.com/Pault26/Module-6-Challenge/issues) for a full list of proposed features (and known issues).
@@ -129,8 +130,8 @@ See the [open issues](https://github.com/Pault26/Module-6-Challenge/issues) for 
 
 Special Thanks to the following!
 
-RanJan-Beginner's Guide: https://www.youtube.com/watch?v=QEu8_5bYm-w&t=625s
-Othneildrew's Best Readme Template: https://github.com/othneildrew/Best-README-Template
+* RanJan-Beginner's Guide: https://www.youtube.com/watch?v=QEu8_5bYm-w&t=625s
+*  Othneildrew's Best Readme Template: https://github.com/othneildrew/Best-README-Template
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
@@ -171,9 +172,6 @@ Project Link: [https://github.com/Pault26/Module-6-Challenge](https://github.com
 Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
 
 * [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
 * [Img Shields](https://shields.io)
 * [GitHub Pages](https://pages.github.com)
 
@@ -183,7 +181,7 @@ Use this space to list resources you find helpful and would like to give credit 
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[product-screenshot]: /Develop/Assets/Images/ProjectfinalScreenshot.png
+[product-screenshot]: /Develop/Assets/Images/06Bestcapture.PNG
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
